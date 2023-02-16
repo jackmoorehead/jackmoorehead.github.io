@@ -1,0 +1,75 @@
+body { 
+	font-family: 'Karla';
+	background: #edeae5;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	margin: 0px;
+    text-align: center;
+}
+
+/* Selectors, such as the 'body' tag above, tells the computer which elements in the HTML to select for styling properties. 
+    A Property defines what we are changing about the selected element. A Value specifies how we are changing the property. */
+
+a {
+    text-decoration: none;
+    color: rgba(0,0,0,0.5);
+    font-style: italic;
+    transition: 0.4s;
+}
+
+a:hover {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+div {
+	transition: linear 0.2s;
+}
+
+#container {
+    width: 480px;
+    height: 480px;
+    position: absolute;
+    top: calc(50% - 240px);
+    left: calc(50% - 240px);
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    background: #ffffff;
+    display: inline-block;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.square {
+    width: 60px;
+    height: 60px;
+    background: #e67e22;
+    display: inline-block;
+    margin-right: 30px;
+}
+.row {
+    margin-bottom: 30px;
+}
+.row .circle:first-child { /*Using pseudo-selector syntax to select an element. Good for selecting elements that meet certain conditions, or under a certain 'state', i.e. interactivion */
+    opacity: 0
+}
+.circle:hover {
+    opacity: 0.5
+}
+.circle.fancy /*Selecting an element with multiple names. No space between the CSS selectors. */ {
+    border-style: dotted
+}
+#third-row .circle  { /*Selected a nested element in order to stylize the circle properties in the third row. Telling to the computer specific selection methods. */
+    background: #de6868; 
+}
+#second-row .circle:hover {
+    transform: scale(1.25)
+}
+.green {
+    background: #6392c0
+}
+.fancy {
+    background: #6392c0
+}
